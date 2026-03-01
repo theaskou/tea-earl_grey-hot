@@ -114,6 +114,9 @@
         const start = Date.now();
         const end = start + sixMinutesInMilliseconds;
 
+        displayTimeLeft(sixMinutesInMilliseconds); // bug fix to avoid skipping 05:59
+
+
         countdown = setInterval(() => {
             const millisecondsLeft = Math.max(end - Date.now(), 0);
             displayTimeLeft(millisecondsLeft);
