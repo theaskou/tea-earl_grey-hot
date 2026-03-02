@@ -121,7 +121,7 @@
             const millisecondsLeft = Math.max(end - Date.now(), 0);
             displayTimeLeft(millisecondsLeft);
 
-            if (millisecondsLeft <= 1000) {
+            if (millisecondsLeft === 0) {
                 finishSound.play();
                 imageDisplay.innerHTML = '<img src="/public/assets/images/picard.webp" alt="Picard says your tea is ready." />';
                 timerButton.textContent = "Reset";
